@@ -41,7 +41,7 @@ body {
 
 .banner-header {
   position: relative;
-  padding: 20px 0;
+  padding: 10px 0;
   text-align: center;
   background: linear-gradient(180deg, #f29a00, #ffc400);
 }
@@ -73,7 +73,7 @@ body {
 .banner-logo {
   position: relative;
   z-index: 1;
-  width: clamp(220px, 24vw, 280px);
+  width: clamp(220px, 12vw, 280px);
   height: auto;
   display: inline-block;
 }
@@ -81,7 +81,7 @@ body {
 /* ========= CONTEÚDO PRINCIPAL ========= */
 
 .banner-main {
-  padding: clamp(16px, 3vw, 28px);
+  padding: clamp(16px, 1vw, 28px);
 }
 
 /* Bloco título */
@@ -89,7 +89,7 @@ body {
 .banner-title-box {
   background: rgba(0, 0, 0, 0.35);
   border-radius: 12px;
-  padding: clamp(14px, 2.6vw, 22px);
+  padding: clamp(14px, 2.2vw, 22px);
   text-align: center;
   margin-bottom: clamp(16px, 3vw, 24px);
 }

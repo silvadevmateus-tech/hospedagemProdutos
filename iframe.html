@@ -8,9 +8,25 @@
 </head>
 
 <body>
-    <div style="width: 100%; height: clamp(600px, 100vh, 110vh); border-radius: 12px; overflow: hidden;"><iframe
-            src="https://hospedagem-produtos.vercel.app/"
-            style="width: 100%; height: 100%; border: 0; border-radius: 12px;" scrolling="no"></iframe></div>
+    <div id="iframeContainer" style="width: 100%; height: 800px; border-radius: 12px; overflow: hidden;"><iframe
+            src="https://hospedagem-produtos.vercel.app/" id="iframeConteudo"
+            style="width: 100%; height: 100%; border: 0; border-radius: 12px;" scrolling="no"> </iframe></div>
+    <script type="text/javascript">// <![CDATA[
+        (function () {
+            function ajustarAltura() {
+                // Altura real da viewport (corrige problema de 100vh em mobile)
+                const alturaReal = window.innerHeight;
+                const container = document.getElementById("iframeContainer");
+                container.style.height = alturaReal + ".5px";
+            }
+
+            // Ajusta no carregamento
+            ajustarAltura();
+
+            // Ajusta sempre que a tela mudar (rotação, barra do navegador, etc.)
+            window.addEventListener("resize", ajustarAltura);
+        })();
+        // ]]></script>
 </body>
 
 </html>
