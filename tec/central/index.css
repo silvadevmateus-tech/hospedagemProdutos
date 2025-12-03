@@ -244,6 +244,15 @@ body {
 /* ===== RESPONSIVIDADE PARA DISPOSITIVOS PEQUENOS ===== */
 
 @media (max-width: 768px) {
+  .banner-estrutura {
+    padding: 10px;
+    align-items: stretch; /* puxa o card pra ocupar melhor a tela */
+  }
+
+  .banner-card {
+    border-radius: 12px;
+  }
+
   /* GRID vira coluna única */
   .banner-grid {
     grid-template-columns: 1fr !important;
@@ -252,16 +261,24 @@ body {
 
   /* Blocos internos empilham verticalmente */
   .avaliacoes-wrapper {
-    flex-direction: flex;
+    flex-direction: column; /* aqui estava "flex", que é inválido */
     gap: 12px;
   }
 
-  /* Círculos das unidades: centraliza e empilha mais suavemente */
+  /* Círculos das unidades: um pouco maiores e bem espaçados */
   .unidades-grid {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 12px;
   }
 
-  /* Títulos centralizados */
+  .banner-title {
+    font-size: 20px;
+  }
+
+  .intro-text {
+    font-size: 14px;
+  }
+
   .card-title {
     text-align: center;
   }
@@ -270,16 +287,28 @@ body {
 @media (max-width: 480px) {
   /* Mobile ainda mais compacto */
   .banner-main {
-    padding: 14px;
+    padding: 12px;
+  }
+
+  .banner-header {
+    padding: 14px 0;
+  }
+
+  .banner-logo {
+    width: clamp(180px, 60vw, 220px);
   }
 
   .unidade-circle,
   .avaliacao-circle {
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
   }
 
   .avaliacoes-plus {
-    font-size: 20px;
+    font-size: 18px;
+  }
+
+  .banner-note {
+    font-size: 13px;
   }
 }
