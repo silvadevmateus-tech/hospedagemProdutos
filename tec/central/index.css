@@ -261,7 +261,7 @@ body {
 
   /* Blocos internos empilham verticalmente */
   .avaliacoes-wrapper {
-    flex-direction: column; /* aqui estava "flex", que é inválido */
+    flex-direction: flex; /* aqui estava "flex", que é inválido */
     gap: 12px;
   }
 
