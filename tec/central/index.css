@@ -19,7 +19,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 16px;
   background:
     url("https://github.com/silvadevmateus-tech/hospedagemProdutos/blob/main/tec/imagens/FUNDO_AZUL_BI.jpeg?raw=true")
       center/cover no-repeat;
