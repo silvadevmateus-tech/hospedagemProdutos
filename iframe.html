@@ -16,9 +16,8 @@
                 }
                 if (window.innerWidth <= 480) {
                     const altura_real = window.innerHeight;
-                    container.style.height = (altura_real * 1.25) + 'px'
+                    container.style.height = (altura_real * 1.13) + 'px'
                     container.style.width = "100%";
-                    container.style.overflowY = 'auto';
                 }
                 // DESKTOP → mantém 800px padrão
                 else if (window.innerWidth <= 1024) {
@@ -28,7 +27,7 @@
                 }
                 else if (window.innerWidth <= 1920) {
                     const altura_real = window.innerHeight;
-                    container.style.height = (altura_real * 0.80) + "px";
+                    container.style.height = (altura_real * 0.94) + "px";
                     container.style.width = "65%";
                 }
             }
