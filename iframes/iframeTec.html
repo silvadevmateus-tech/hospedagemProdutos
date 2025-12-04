@@ -11,19 +11,19 @@
                 // MOBILE → força altura real = 100vh
                 if (window.innerWidth <= 768) {
                     const altura_real = window.innerHeight;
-                    container.style.height = (altura_real * 2) + 'px';
+                    container.style.height = (altura_real * 0.75) + 'px';
                     container.style.width = "100%";
                 }
                 if (window.innerWidth <= 480) {
                     const altura_real = window.innerHeight;
-                    container.style.height = (altura_real * 1.22) + 'px'
+                    container.style.height = (altura_real * 0.75) + 'px'
                     container.style.width = "100%";
                 }
                 // DESKTOP → mantém 800px padrão
                 else if (window.innerWidth <= 1024) {
                     const altura_real = window.innerHeight;
                     container.style.height = (altura_real * 0.75) + "px";
-                    container.style.width = "72%";
+                    container.style.width = "100%";
                 }
                 else if (window.innerWidth <= 1920) {
                     const altura_real = window.innerHeight;

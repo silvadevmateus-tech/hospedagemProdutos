@@ -1,0 +1,78 @@
+/* Fundo geral */
+.banner-container {
+  background: #070B1A url('https://i.imgur.com/R7O2jfd.png') center/cover no-repeat;
+  padding: 40px 20px;
+  border-radius: 14px;
+  color: #fff;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* Cabeçalho */
+.banner-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.banner-header h1 {
+  font-size: 32px;
+  margin: 0;
+}
+
+.banner-header p {
+  margin-top: 6px;
+  opacity: 0.8;
+}
+
+/* Linha (flex container) */
+.linha {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+/* Cards */
+.card {
+  background: #4517FF;
+  padding: 20px 22px;
+  border-radius: 16px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+.card .icon {
+  font-size: 38px;
+  margin-bottom: 12px;
+}
+
+/* Seta */
+.seta {
+  font-size: 32px;
+  color: #ffd200;
+}
+
+/* Painel da média final */
+.painel-final {
+  background: #12192c;
+  border-left: 6px solid #ffd200;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .seta {
+    transform: rotate(90deg);
+  }
+}

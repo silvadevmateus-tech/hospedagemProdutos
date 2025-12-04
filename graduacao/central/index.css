@@ -72,24 +72,6 @@ body {
   margin-top: 6px;
 }
 
-/* 3 colunas em telas bem grandes */
-@media (min-width: 1200px) {
-  .kit-countdown {
-    flex: 1 1 calc(33.333% - 12px);
-    max-width: calc(33.333% - 12px);
-  }
-}
-
-/* 1 coluna em telas menores */
-@media (max-width: 768px) {
-  .kit-countdown {
-    flex: 1 1 100%;
-    max-width: 100%;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
 /* ========= BANNER ROOT ========= */
 
 .banner-root {
@@ -340,7 +322,28 @@ body {
     padding: 1rem;
     border-radius: 12px;
   }
+  .kit-container {
+    max-height: 800px;
+    overflow-y: auto;
+  }
 
+  .kit-container::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .kit-container::-webkit-scrollbar-track {
+    background: #e0e0e0;
+    border-radius: 4px;
+  }
+
+  .kit-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+  }
+
+  .kit-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
   .banner-content {
     gap: 16px;
   }
