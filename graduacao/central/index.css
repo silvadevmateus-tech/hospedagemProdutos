@@ -399,7 +399,9 @@ body {
   .card {
     padding: 10px;
   }
-
+  .kit-countdown{
+    overflow-y: auto;
+  }
   .kit-entrega {
     font-size: 0.85rem;
   }
