@@ -240,6 +240,7 @@
     var badge = card.querySelector(".kit-badge");
     var entrega = card.querySelector(".kit-entrega");
     var timer = card.querySelector(".kit-timer");
+    var data = card.querySelector
 
     card.style.background = "";
     card.style.borderColor = "#e0e0e0";

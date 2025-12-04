@@ -227,12 +227,13 @@ body {
   border-collapse: collapse;
   color: #fff;
   font-size: clamp(0.8rem, 2vw, 1rem);
+
 }
 
 .banner-table th,
 .banner-table td {
   padding: 7px;
-  font-size: clamp(0.8rem, 1.1rem, 1.2rem);
+  font-size: clamp(0.8rem, 100rem, 1.2rem);
 }
 
 .banner-table thead tr {
@@ -269,6 +270,7 @@ body {
 
 .card-legenda {
   flex: 1;
+  max-height: 200px;
 }
 
 .legenda-titulo {
