@@ -361,11 +361,9 @@ body {
     flex-direction: column;
   }
 
-  .card-tabela {
+  .card-tabela,
+  .card-legenda {
     width: 100%;
-  }
-  .card-legenda{
-    width: 30%;
   }
 
   .banner-header {
