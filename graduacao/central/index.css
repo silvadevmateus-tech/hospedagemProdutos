@@ -11,24 +11,24 @@ body {
   padding: 0;
 }
 
-/* ========= CONTAINER GERAL ========= */
-
 body {
   font-family: Arial, sans-serif;
 }
 
-/* KIT CONTAINER (COUNTDOWN) */
+/* ========= KIT CONTAINER (COUNTDOWN) ========= */
+
 .kit-container {
   width: 100%;
   border-radius: 10px;
   padding: 14px;
-  display: none; /* é controlado via JS */
+  display: none;          /* controlado via JS */
   align-items: stretch;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 12px;
   flex-wrap: wrap;
 }
 
+/* cards lado a lado em telas maiores */
 .kit-countdown {
   border: 1px solid #e0e0e0;
   border-radius: 10px;
@@ -36,7 +36,8 @@ body {
   display: flex;
   align-items: center;
   gap: 12px;
-  flex: 1 1 260px;         /* ocupa bem em qualquer largura */
+  flex: 1 1 calc(50% - 12px);   /* 2 colunas por padrão */
+  max-width: calc(50% - 12px);
   min-width: 0;
 }
 
@@ -54,25 +55,45 @@ body {
 }
 
 .kit-entrega {
-  font-size: 16px;
+  font-size: clamp(0.9rem, 1.1vw, 1rem);
   color: #000;
 }
 
 .kit-titulo {
-  font-size: 20px;
+  font-size: clamp(1rem, 1.4vw, 1.25rem);
   margin: 4px 0 6px;
 }
 
 .kit-timer {
   color: #000;
-  font-size: 18px;
+  font-size: clamp(0.9rem, 1.4vw, 1.1rem);
   margin-top: 6px;
+}
+
+/* 3 colunas em telas bem grandes */
+@media (min-width: 1200px) {
+  .kit-countdown {
+    flex: 1 1 calc(33.333% - 12px);
+    max-width: calc(33.333% - 12px);
+  }
+}
+
+/* 1 coluna em telas menores */
+@media (max-width: 768px) {
+  .kit-countdown {
+    flex: 1 1 100%;
+    max-width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 /* ========= BANNER ROOT ========= */
 
 .banner-root {
   width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
   background-image: url("https://github.com/silvadevmateus-tech/hospedagemProdutos/blob/main/tec/imagens/FUNDO_AZUL_BI.jpeg?raw=true");
   background-size: cover;
   background-position: center;
@@ -149,7 +170,7 @@ body {
   box-sizing: border-box;
 }
 
-/* Hover com animação (substitui onmouseover/onmouseout inline) */
+/* Hover com animação */
 .card-hover {
   transition: transform 0.3s, box-shadow 0.3s;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -226,14 +247,13 @@ body {
   width: 100%;
   border-collapse: collapse;
   color: #fff;
-  font-size: clamp(0.8rem, 2vw, 1rem);
-
+  font-size: clamp(0.8rem, 2.2vw, 1rem);
 }
 
 .banner-table th,
 .banner-table td {
   padding: 7px;
-  font-size: clamp(0.8rem, 100rem, 1.2rem);
+  font-size: clamp(0.8rem, 2.2vw, 1.1rem);
 }
 
 .banner-table thead tr {
@@ -251,14 +271,14 @@ body {
 .th-info {
   text-align: left;
   padding: 10px;
-  font-size: clamp(1rem, 1.3rem, 1.5rem);
+  font-size: clamp(1rem, 2.4vw, 1.4rem);
   color: #ffd200;
 }
 
 .th-date {
   text-align: right;
   padding: 10px;
-  font-size: clamp(0.9rem, 1.2rem, 1.4rem);
+  font-size: clamp(0.9rem, 2.2vw, 1.3rem);
   color: #ffd200;
 }
 
@@ -270,7 +290,6 @@ body {
 
 .card-legenda {
   flex: 1;
-  max-height: 200px;
 }
 
 .legenda-titulo {
@@ -306,7 +325,7 @@ body {
 }
 
 .legenda-texto {
-  font-size: clamp(0.9rem, 1rem, 1.2rem);
+  font-size: clamp(0.9rem, 1.1vw, 1.1rem);
 }
 
 .legenda-descricao {
@@ -347,7 +366,6 @@ body {
     width: 100%;
   }
 
-  /* Deixar botões mais amigáveis em mobile */
   .banner-header {
     min-height: auto;
     padding-top: 8px;
@@ -382,25 +400,20 @@ body {
     padding: 10px;
   }
 
-  .kit-countdown {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
   .kit-entrega {
-    font-size: 14px;
+    font-size: 0.85rem;
   }
 
   .kit-titulo {
-    font-size: 16px;
+    font-size: 1rem;
   }
 
   .kit-timer {
-    font-size: 14px;
+    font-size: 0.85rem;
   }
 
   .kit-badge {
     padding: 8px 10px;
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 }
