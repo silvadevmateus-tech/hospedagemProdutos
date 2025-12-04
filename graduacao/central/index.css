@@ -21,7 +21,8 @@ body {
   width: 100%;
   border-radius: 10px;
   padding: 14px;
-  display: none;          /* controlado via JS */
+  display: none;
+  /* controlado via JS */
   align-items: stretch;
   justify-content: flex-start;
   gap: 12px;
@@ -36,7 +37,8 @@ body {
   display: flex;
   align-items: center;
   gap: 12px;
-  flex: 1 1 calc(50% - 12px);   /* 2 colunas por padrão */
+  flex: 1 1 calc(50% - 12px);
+  /* 2 colunas por padrão */
   max-width: calc(50% - 12px);
   min-width: 0;
 }
@@ -204,12 +206,10 @@ body {
   width: clamp(180px, 40%, 320px);
   height: 80%;
   max-height: 120px;
-  background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 0.75) 50%,
-    rgba(255, 255, 255, 0.08) 200%,
-    transparent 100%
-  );
+  background: radial-gradient(circle,
+      rgba(255, 255, 255, 0.75) 50%,
+      rgba(255, 255, 255, 0.08) 200%,
+      transparent 100%);
   filter: blur(10px);
   border-radius: 50%;
   z-index: 0;
@@ -399,9 +399,30 @@ body {
   .card {
     padding: 10px;
   }
-  .kit-countdown{
+
+  .kit-container {
+    max-height: 800px;
     overflow-y: auto;
   }
+
+  .kit-container::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .kit-container::-webkit-scrollbar-track {
+    background: #e0e0e0;
+    border-radius: 4px;
+  }
+
+  .kit-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+  }
+
+  .kit-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
   .kit-entrega {
     font-size: 0.85rem;
   }
