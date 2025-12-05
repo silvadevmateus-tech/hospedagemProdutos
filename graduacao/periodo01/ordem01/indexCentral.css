@@ -411,8 +411,24 @@ body {
   }
 
   .kit-container {
-    max-height: 800px;
     overflow-y: auto;
+  }
+  .kit-container::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .kit-container::-webkit-scrollbar-track {
+    background: #e0e0e0;
+    border-radius: 4px;
+  }
+
+  .kit-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+  }
+
+  .kit-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
   }
 }
 
