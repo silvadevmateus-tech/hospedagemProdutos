@@ -411,6 +411,7 @@ body {
   }
 
   .kit-container {
+    height: 80%;
     overflow-y: auto;
   }
   .kit-container::-webkit-scrollbar {
