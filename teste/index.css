@@ -1,0 +1,536 @@
+/* ========= RESET BÁSICO ========= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Arial, sans-serif;
+  background: radial-gradient(circle at top, #153b9a 0, #020827 55%, #000110 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  color: #ffffff;
+}
+
+/* ========= BANNER ROOT ========= */
+.banner-root {
+  width: 100%;
+  max-width: 1200px;
+  background-image: url("https://github.com/silvadevmateus-tech/hospedagemProdutos/blob/main/tec/imagens/FUNDO_AZUL_BI.jpeg?raw=true");
+  border-radius: 24px;
+  padding: 20px 24px 26px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.55);
+  position: relative;
+  overflow: hidden;
+}
+
+/* leve overlay decorativo */
+.banner-root::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 0%, rgba(255, 255, 255, 0.08), transparent 55%),
+              radial-gradient(circle at 80% 100%, rgba(61, 120, 255, 0.18), transparent 60%);
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+/* conteúdo real acima do overlay */
+.banner-root > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ========= HEADER / BOTÕES ========= */
+
+.banner-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 12px;
+}
+
+.banner-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+/* Botões genéricos */
+.btn {
+  border: none;
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.03em;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  white-space: nowrap;
+}
+
+/* Botão principal (abrir prazos) */
+.btn-timer {
+  background: linear-gradient(135deg, #ffd53a, #ffb347);
+  color: #1b1300;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.18),
+              0 10px 24px rgba(0, 0, 0, 0.45);
+}
+
+/* Botão secundário (voltar) */
+.btn-back {
+  background: linear-gradient(135deg, #ffd53a, #ffb347);
+  color: #1b1300;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.18),
+              0 10px 24px rgba(0, 0, 0, 0.45);
+}
+
+/* Interações */
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.55);
+}
+
+.btn:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+}
+
+/* ========= SWITCHER E CONTEÚDO PRINCIPAL ========= */
+.banner-switcher {
+  width: 100%;
+}
+
+.banner-content {
+  display: flex;
+  gap: 18px;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* ========= CARDS BASE ========= */
+.card {
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 18px;
+  padding: 18px 20px 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(7px);
+}
+
+/* Hover geral dos cards */
+.card-hover {
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.25s ease;
+}
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+  background: rgba(2, 10, 45, 0.95);
+}
+
+/* Card da tabela ocupa mais espaço */
+.card-tabela {
+  flex: 2 1 520px;
+}
+
+/* Card legenda menor */
+.card-legenda {
+  flex: 1 1 260px;
+}
+
+/* ========= LOGO E TÍTULOS ========= */
+
+/* WRAPPER GERAL DA LOGO */
+.logo-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+  margin-top: 8px;
+}
+
+/* BASE ILUMINADA (efeito suave sob a logo) */
+.logo-glow {
+  position: absolute;
+  bottom: -10px; 
+  width: 160px;
+  height: 38px;
+
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255,255,255,0.35) 0%,
+    rgba(255,255,255,0.12) 40%,
+    transparent 80%
+  );
+
+  filter: blur(16px);
+  opacity: 0.65;
+
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* LOGO EM SI */
+.logo-img {
+  max-width: 180px;
+  width: 62%;
+  z-index: 2;
+
+  /* sem fundo opaco, para ficar flutuando naturalmente */
+  background: none;
+  padding: 0;
+
+  /* pequenas correções de qualidade */
+  image-rendering: -webkit-optimize-contrast;
+
+  /* sombra muito suave para o efeito de elevação */
+  filter: drop-shadow(0 8px 12px rgba(0,0,0,0.35));
+}
+
+
+.banner-title {
+  text-align: center;
+  font-size: 1.35rem;
+  margin: 6px 0 0;
+  font-weight: 700;
+}
+
+.banner-subtitle {
+  text-align: center;
+  font-size: 0.95rem;
+  margin: 4px 0 16px;
+  color: #ffd54f;
+  font-weight: 500;
+}
+
+/* ========= TABELA ========= */
+.banner-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+
+.banner-table thead {
+  background: rgba(6, 31, 102, 0.9);
+}
+
+.banner-table th,
+.banner-table td {
+  padding: 9px 10px;
+}
+
+.banner-table th {
+  font-weight: 700;
+  text-align: left;
+}
+
+.th-info {
+  width: 60%;
+}
+
+.th-date {
+  width: 40%;
+  text-align: right;
+}
+
+.banner-table tbody tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.banner-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.banner-table tbody tr:hover {
+  background: rgba(14, 46, 119, 0.7);
+}
+
+.banner-table td {
+  vertical-align: top;
+}
+
+.td-right {
+  text-align: right;
+  font-weight: 500;
+}
+
+/* ========= LEGENDA ========= */
+.legenda-titulo {
+  font-size: 1.05rem;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.legenda-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 10px 0;
+  font-size: 0.9rem;
+}
+
+.legenda-bolinha {
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  margin-top: 2px;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.4),
+              0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.bolinha-azul {
+  background: linear-gradient(145deg, #3da9ff, #0066ff);
+}
+.bolinha-verde {
+  background: linear-gradient(145deg, #35d688, #00994a);
+}
+.bolinha-amarela {
+  background: linear-gradient(145deg, #ffe66d, #ffb300);
+}
+.bolinha-vermelha {
+  background: linear-gradient(145deg, #ff7676, #d30030);
+}
+
+.legenda-texto strong {
+  font-size: 0.95rem;
+}
+.legenda-descricao {
+  font-size: 0.85rem;
+  color: #f0f0f0;
+}
+
+/* ========= COUNTDOWN / KITS ========= */
+
+/* Container geral (é exibido/ocultado via JS, mas aqui definimos o layout) */
+/* ========= COUNTDOWN / KITS ========= */
+
+/* Container geral dos cards de prazos */
+.kit-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 8px;
+  display: flex;              /* o JS controla o display: flex / none */
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+/* Cada card de prazo (2 colunas no desktop) */
+.kit-countdown {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  border-radius: 22px;
+  background: #f5fbff;                      /* fundo claro */
+  box-shadow: 0 10px 26px rgba(0, 0, 0, .45);
+  border: 2px solid rgba(255, 255, 255, .85);
+  min-width: 280px;
+  flex: 1 1 calc(50% - 12px);               /* 2 colunas */
+}
+
+/* Modelo escondido (clonado via JS) */
+.kit-modelo {
+  display: none;
+}
+
+/* Badge lateral (círculo colorido com texto vertical) */
+.kit-badge {
+  flex: 0 0 54px;
+  width: 54px;
+  height: 54px;
+  border-radius: 30px;
+  background: linear-gradient(180deg, #1f8f2e, #0b5c19); /* verde padrão */
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  /* deixa o texto vertical, igual ao print */
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+/* Conteúdo (título + datas + timer) */
+.kit-entrega {
+  flex: 1 1 auto;
+  font-size: 0.92rem;
+  font-weight: bold;
+  color: #091428;
+}
+
+.kit-titulo {
+  margin: 0 0 4px;
+  font-weight: 600;
+  font-size: 1rem;                          /* título amarelo */
+}
+
+/* Texto das datas */
+.kit-entrega strong {
+  font-weight: 700;
+}
+
+/* Timer estilo “pílula” escura */
+.kit-timer {
+  border-radius: 999px;
+  font-family: "SF Mono", "Roboto Mono", ui-monospace, monospace;
+  font-size: 0.9rem;
+}
+
+/* ========= ESTADOS OPCIONAIS (se quiser pintar cartões por status) ========= */
+/* Basta adicionar a classe no JS: .kit-countdown--futuro, .kit-countdown--ativo, .kit-countdown--encerrado */
+
+.kit-countdown--futuro {
+  background: #f5fbff;
+}
+
+.kit-countdown--ativo {
+  background: #eef8ff;
+}
+
+.kit-countdown--encerrado {
+  background: #ff4b5a;
+  color: #fff;
+}
+
+.kit-countdown--encerrado .kit-entrega {
+  color: #fff;
+}
+
+.kit-countdown--encerrado .kit-titulo {
+  color: #ffe66d;
+}
+
+/* Badge vermelha para encerrados (opcional) */
+.kit-countdown--encerrado .kit-badge {
+  background: linear-gradient(180deg, #ff7676, #d30030);
+}
+
+/* Responsivo: 1 coluna no mobile */
+@media (max-width: 800px) {
+  .kit-countdown {
+    flex: 1 1 100%;
+  }
+}
+
+/* ========= RESPONSIVIDADE ========= */
+
+@media (max-width: 960px) {
+  .banner-root {
+    padding: 18px 16px 20px;
+    border-radius: 18px;
+  }
+
+  .card-tabela {
+    flex: 1 1 100%;
+  }
+
+  .card-legenda {
+    flex: 1 1 100%;
+  }
+
+  .banner-content {
+    flex-direction: column;
+  }
+
+  .banner-header {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  .logo-img {
+    width: 60%;
+  }
+
+  .banner-title {
+    font-size: 1.2rem;
+  }
+
+  .banner-subtitle {
+    font-size: 0.9rem;
+  }
+
+  /* Tabela “cardificada” no mobile */
+  .banner-table {
+    font-size: 0.9rem;
+  }
+
+  .banner-table thead {
+    display: none;
+  }
+
+  .banner-table tbody tr {
+    display: block;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .banner-table tbody tr:last-child {
+    border-bottom: none;
+  }
+
+  .banner-table td {
+    display: block;
+    text-align: left;
+    padding: 2px 0;
+  }
+
+  .banner-table td.td-right {
+    margin-top: 3px;
+    font-weight: 600;
+    opacity: 0.9;
+  }
+
+  .btn {
+    font-size: 0.85rem;
+    padding: 7px 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-root {
+    padding: 14px 12px 16px;
+    border-radius: 16px;
+  }
+
+  .banner-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .card {
+    padding: 14px 12px 16px;
+  }
+
+  .legenda-item {
+    align-items: center;
+  }
+
+  .kit-countdown {
+    flex-direction: row;
+  }
+}

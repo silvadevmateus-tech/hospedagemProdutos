@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Banner Calendário 2025.2.2</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+
+  <!-- ===== BANNER 1: CALENDÁRIO 2025.2.2 + COUNTDOWN ===== -->
+
+  <!-- BLOCO 1: COUNTDOWN (modelo clonado por JS) -->
+  <div id="kit-container" class="kit-container">
+    <!-- CARD MODELO (será clonado) -->
+    <div class="kit-countdown kit-modelo" data-slot="model">
+      <div class="kit-badge"></div>
+      <div class="kit-entrega">
+        <p class="kit-titulo"></p>
+        Início: <strong class="inicio"></strong><br />
+        Encerra: <strong class="encerramento"></strong>
+        <div class="kit-timer" aria-live="polite" data-deadline=""></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOCO 2: BANNER PRINCIPAL -->
+  <div id="banner-root" class="banner-root">
+
+    <!-- Header do banner: botões no canto superior direito -->
+    <div class="banner-header">
+      <div class="banner-buttons">
+        <button
+          id="btnOpenTimer"
+          aria-controls="banner-switcher"
+          aria-expanded="false"
+          class="btn btn-timer"
+        >
+          Clique Para Ver Prazos
+        </button>
+
+        <button
+          id="btnBackBanner"
+          aria-controls="banner-switcher"
+          aria-expanded="true"
+          class="btn btn-back"
+          style="display:none;"
+        >
+          Voltar Ao Banner
+        </button>
+      </div>
+    </div>
+
+    <!-- SWITCHER -->
+    <div id="banner-switcher" class="banner-switcher">
+
+      <!-- View padrão -->
+      <div id="banner-default-view">
+        <div class="banner-content">
+
+          <!-- CARD TABELA DE DATAS -->
+          <div class="card card-tabela card-hover">
+            <!-- LOGO centralizada dentro da TABELA (acima do título) -->
+            <div class="logo-wrapper">
+              <div class="logo-glow"></div>
+              <img
+                src="https://github.com/silvadevmateus-tech/hospedagemProdutos/blob/main/tec/imagens/Logo_colorida.png?raw=true"
+                alt="UniAteneu"
+                class="logo-img"
+              />
+            </div>
+
+            <h2 class="banner-title">Calendário 2025.2.2</h2>
+            <p class="banner-subtitle">Disciplina Azul - Ordem 01</p>
+
+            <table class="banner-table">
+              <thead>
+                <tr>
+                  <th class="th-info">Informações Importantes</th>
+                  <th class="th-date">Datas</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Avaliação NP1 (Questionários)</td>
+                  <td class="td-right">03 de Novembro a 31 de Dezembro</td>
+                </tr>
+                <tr>
+                  <td>Maratona do Conhecimento (Evento ao vivo)</td>
+                  <td class="td-right">20 de Novembro</td>
+                </tr>
+                <tr>
+                  <td>Maratona do Conhecimento (Questionário)</td>
+                  <td class="td-right">20 de Novembro a 31 de Dezembro</td>
+                </tr>
+                <tr>
+                  <td>Agendamento Avaliação NP2</td>
+                  <td class="td-right">03 de Novembro a 23 de Dezembro</td>
+                </tr>
+                <tr>
+                  <td>Avaliação NP2 (Presencial)</td>
+                  <td class="td-right">07 a 10 Janeiro de 2026</td>
+                </tr>
+                <tr>
+                  <td>Agendamento 2ª Chamada NP2</td>
+                  <td class="td-right">12 a 15 Janeiro de 2026</td>
+                </tr>
+                <tr>
+                  <td>2ª Chamada Avaliação NP2 (Presencial)</td>
+                  <td class="td-right">17 Janeiro de 2026</td>
+                </tr>
+                <tr>
+                  <td>Avaliação Final (Recuperação de Nota)</td>
+                  <td class="td-right">22 e 23 de Janeiro de 2026</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- CARD LEGENDA -->
+          <div class="card card-legenda card-hover">
+            <h3 class="legenda-titulo">Entenda as Cores das Disciplinas</h3>
+
+            <p class="legenda-item">
+              <span class="legenda-bolinha bolinha-azul"></span>
+              <span class="legenda-texto">
+                <strong>Disciplina Azul</strong><br />
+                <span class="legenda-descricao">Avaliação NP2 Presencial (Agendamento)</span>
+              </span>
+            </p>
+
+            <p class="legenda-item">
+              <span class="legenda-bolinha bolinha-verde"></span>
+              <span class="legenda-texto">
+                <strong>Disciplina Verde</strong><br />
+                <span class="legenda-descricao">Sem Avaliação NP2 Presencial</span>
+              </span>
+            </p>
+
+            <p class="legenda-item">
+              <span class="legenda-bolinha bolinha-amarela"></span>
+              <span class="legenda-texto">
+                <strong>Disciplina Amarela</strong><br />
+                <span class="legenda-descricao">Avaliação NP2 Presencial (Agendamento)</span>
+              </span>
+            </p><br>
+
+            <h3 class="legenda-titulo">Entenda as Cores dos Prazos</h3>
+
+            <p class="legenda-item">
+              <span class="legenda-bolinha bolinha-azul"></span>
+              <span class="legenda-texto">
+                <strong>Cor Azul</strong><br />
+                <span class="legenda-descricao">Evento Que Irá Iniciar</span>
+              </span>
+            </p>
+
+            <p class="legenda-item">
+              <span class="legenda-bolinha bolinha-verde"></span>
+              <span class="legenda-texto">
+                <strong>Cor Verde</strong><br />
+                <span class="legenda-descricao">Evento Que Está Ocorrendo Atualmente</span>
+              </span>
+            </p>
+
+            <p class="legenda-item">
+              <span class="legenda-bolinha bolinha-amarela"></span>
+              <span class="legenda-texto">
+                <strong>Cor Amarela</strong><br />
+                <span class="legenda-descricao">Evento Finalizando</span>
+              </span>
+            </p>
+
+            <p class="legenda-item">
+              <span class="legenda-bolinha bolinha-vermelha"></span>
+              <span class="legenda-texto">
+                <strong>Cor Vermelha</strong><br />
+                <span class="legenda-descricao">Evento Encerrado</span>
+              </span>
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- View do temporizador (o #kit-container será movido para cá via JS) -->
+      <div id="banner-timer-view"></div>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
