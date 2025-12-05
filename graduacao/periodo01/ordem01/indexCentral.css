@@ -324,9 +324,16 @@ body {
     border-radius: 12px;
   }
   .kit-container {
-    max-height: 800px;
-    overflow-y: auto;
-  }
+  width: 100%;
+  border-radius: 10px;
+  padding: 14px;
+  display: none;
+  /* controlado via JS */
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 12px;
+  flex-wrap: wrap;
+}
 
   .kit-container::-webkit-scrollbar {
     width: 8px;
@@ -391,6 +398,17 @@ body {
   .banner-table td {
     padding: 6px;
   }
+  .kit-container {
+  width: 100%;
+  border-radius: 10px;
+  padding: 14px;
+  display: none;
+  /* controlado via JS */
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 12px;
+  flex-wrap: wrap;
+}
 }
 
 /* Celulares muito pequenos (até 480px) */
@@ -408,9 +426,16 @@ body {
   }
 
   .kit-container {
-    max-height: 800px;
-    overflow-y: auto;
-  }
+  width: 100%;
+  border-radius: 10px;
+  padding: 14px;
+  display: none;
+  /* controlado via JS */
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 12px;
+  flex-wrap: wrap;
+}
 
   .kit-container::-webkit-scrollbar {
     width: 8px;
