@@ -433,7 +433,7 @@ body {
   }
 
   .kit-container {
-    max-height: 800px;
+    height: 800px;
     overflow-y: auto;
   }
 
