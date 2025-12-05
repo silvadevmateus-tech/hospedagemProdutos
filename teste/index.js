@@ -280,13 +280,13 @@
       showBadge("#ef6c00");
     }
     if (estado === "encerrado") {
-      card.style.background = "linear-gradient(180deg, #ff5252, #ff1744)";
+      card.style.background = "linear-gradient(180deg, #ff9191ff, #f75978ff)";
       card.style.borderColor = "#c62828";
       card.style.boxShadow = "0 0 0 1px rgba(198,40,40,0.35) inset";
       card.style.color = "#fff";
       if (entrega) entrega.style.color = "#fff";
       if (timer) timer.style.color = "#fff";
-      showBadge("#b71c1c");
+      showBadge("#ff0000ff");
     }
   }
 

@@ -230,15 +230,15 @@ body {
 
 .banner-table th {
   font-weight: 700;
-  text-align: left;
 }
 
 .th-info {
-  width: 60%;
+  border-radius: 10px 0px 0px 0px;
+  text-align: left;
 }
 
 .th-date {
-  width: 40%;
+  border-radius: 0px 10px 0px 0px;
   text-align: right;
 }
 
