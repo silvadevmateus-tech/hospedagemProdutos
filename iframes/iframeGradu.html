@@ -1,42 +1,39 @@
-    <div 
-        style="display: flex; border-radius: 12px; overflow: hidden; justify-content: center; align-items: center; margin: 0 auto;">
-        <iframe id="iframeContainer" src="https://periodo01ordem01.vercel.app/"
-            style="width: 100%; height: 640px; margin: 0px; border: 0; border-radius: 12px;" scrolling="no"> </iframe></div>
-    <script type="text/javascript">// <![CDATA[
-        (function () {
+<div
+    style="display: flex; border-radius: 12px; overflow: hidden; justify-content: center; align-items: center; margin: 0 auto;">
+    <iframe id="iframeContainer" src="https://periodo01ordem01.vercel.app/"
+        style="width: 100%; height: 640px; margin: 0px; border: 0; border-radius: 12px;" scrolling="no"> </iframe>
+</div>
+<script type="text/javascript">// <![CDATA[
+    (function () {
 
-            function aplicarAltura() {
-                const container = document.getElementById("iframeContainer");
+        function aplicarAltura() {
+            const container = document.getElementById("iframeContainer");
+            const largura = window.innerWidth;
+            const altura_real = window.innerHeight;
 
-                // MOBILE → força altura real = 100vh
-                if (window.innerWidth <= 768) {
-                    const altura_real = window.innerHeight;
-                    container.style.height = (altura_real * 2) + 'px';
-                    container.style.width = "100%";
-                }
-                if (window.innerWidth <= 480) {
-                    const altura_real = window.innerHeight;
-                    container.style.height = (altura_real * 1.22) + 'px'
-                    container.style.width = "100%";
-                }
-                // DESKTOP → mantém 800px padrão
-                else if (window.innerWidth <= 1024) {
-                    const altura_real = window.innerHeight;
-                    container.style.height = (altura_real * 0.75) + "px";
-                    container.style.width = "100%";
-                }
-                else if (window.innerWidth <= 1920) {
-                    const altura_real = window.innerHeight;
-                    container.style.height = (altura_real * 0.94) + "px";
-                    container.style.width = "100%";
-                }
+            // MOBILE (até 768)
+            if (largura <= 480) {
+                container.style.height = (altura_real * 1.22) + 'px';
+                container.style.width = "100%";
             }
+            else if (largura <= 768) {
+                container.style.height = (altura_real * 2) + 'px';
+                container.style.width = "100%";
+            }
+            // TABLET / DESKTOP
+            else if (largura <= 1024) {
+                container.style.height = (altura_real * 0.75) + "px";
+                container.style.width = "100%";
+            }
+            else if (largura <= 1920) {
+                container.style.height = (altura_real * 0.94) + "px";
+                container.style.width = "100%";
+            }
+        }
 
-            // Executa ao carregar
-            aplicarAltura();
+        // Executa apenas uma vez
+        aplicarAltura();
 
-            // Corrige ao mudar tamanho da tela (ex: rotação)
-            window.addEventListener("resize", aplicarAltura);
+    })();
 
-        })();
         // ]]></script>
