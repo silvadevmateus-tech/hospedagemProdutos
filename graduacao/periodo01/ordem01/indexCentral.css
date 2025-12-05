@@ -272,6 +272,7 @@ body {
 
 .card-legenda {
   flex: 1;
+  height: 1%;
 }
 
 .legenda-titulo {
