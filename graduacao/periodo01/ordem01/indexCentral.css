@@ -29,6 +29,24 @@ body {
   overflow-y: auto;
 }
 
+.kit-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.kit-container::-webkit-scrollbar-track {
+  background: #e0e0e0;
+  border-radius: 4px;
+}
+
+.kit-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.kit-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 /* cards lado a lado em telas maiores */
 .kit-countdown {
   border: 1px solid #e0e0e0;
@@ -321,6 +339,7 @@ body {
     padding: 1rem;
     border-radius: 12px;
   }
+
   .kit-container {
     max-height: 800px;
     overflow-y: auto;
@@ -343,6 +362,7 @@ body {
   .kit-container::-webkit-scrollbar-thumb:hover {
     background: #555;
   }
+
   .banner-content {
     gap: 16px;
   }
@@ -389,6 +409,7 @@ body {
   .banner-table td {
     padding: 6px;
   }
+
   .kit-container {
     max-height: 800px;
     overflow-y: auto;
@@ -401,10 +422,12 @@ body {
     padding: 0.75rem;
     border-radius: 10px;
   }
+
   .banner-table th,
   .banner-table td {
     font-size: 4vw;
   }
+
   .card {
     padding: 10px;
   }
