@@ -1,0 +1,186 @@
+/* CONTAINER PRINCIPAL */
+.banner-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 18px;
+    overflow: hidden;
+    background-color: #ffc800;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+/* TOPO COM LOGO */
+.banner-top {
+    background-color: #ffc800;
+    padding: 10px 5% 16px 5%;
+    text-align: center;
+}
+
+.logo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4px 0 10px 0;
+    position: relative;
+}
+
+.logo-glow {
+    position: absolute;
+    width: clamp(180px, 40%, 320px);
+    height: 80%;
+    max-height: 120px;
+    background: radial-gradient(circle,
+            rgba(255, 255, 255, 0.75) 50%,
+            rgba(255, 255, 255, 0.08) 200%,
+            transparent 100%);
+    filter: blur(10px);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.logo-img {
+    position: relative;
+    z-index: 1;
+    width: clamp(160px, 40%, 280px);
+    height: auto;
+    display: block;
+}
+
+/* ÁREA AZUL */
+.banner-content {
+    position: relative;
+    background: linear-gradient(135deg, #003583 0%, #00194F 40%, #003583 100%);
+    padding: 28px 6% 32px 6%;
+    box-sizing: border-box;
+}
+
+.circle-bg {
+    position: absolute;
+    right: -20%;
+    top: 10%;
+    width: 55%;
+    height: 75%;
+    border-radius: 50%;
+    background: rgba(0, 33, 90, 0.35);
+}
+
+.content-inner {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+/* TÍTULO PRINCIPAL */
+.titulo-principal {
+    font-weight: 900;
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    color: #ffc800;
+    margin-bottom: 22px;
+}
+
+/* CARDS */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(16px, 4vw, 32px);
+    margin-bottom: 26px;
+}
+
+.card {
+    flex: 1 1 clamp(220px, 45%, 420px);
+    min-width: clamp(220px, 60%, 380px);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.card-title {
+    color: #ffc800;
+    font-weight: bold;
+    font-size: clamp(1.3rem, 2.2vw, 1.6rem);
+    margin-bottom: 8px;
+}
+
+.card-box {
+    background: #020723;
+    border-radius: 50px;
+    padding: 20px 26px;
+    box-sizing: border-box;
+}
+
+.card-subtitle {
+    font-weight: bold;
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    margin-bottom: 6px;
+}
+
+.card-text {
+    font-size: clamp(0.95rem, 1.7vw, 1.1rem);
+    margin-bottom: 10px;
+}
+
+/* MÉDIA */
+.titulo-media {
+    color: #ffc800;
+    font-weight: 800;
+    font-size: clamp(1.3rem, 2.3vw, 1.7rem);
+    margin-bottom: 18px;
+}
+
+.media-box {
+    background: #020723;
+    border-radius: 50px;
+    padding: 16px 8vw;
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.media-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.fraction {
+    text-align: center;
+}
+
+.fraction-top {
+    font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+    margin-bottom: 6px;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 6px;
+}
+
+.fraction-bottom {
+    font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+}
+
+.fraction-equal {
+    font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+    white-space: nowrap;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+/* TEXTO FINAL */
+.texto-final {
+    font-size: clamp(0.95rem, 1.7vw, 1.1rem);
+    line-height: 1.6;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 92%;
+}
+
+.destaque {
+    color: #ffc800;
+    font-weight: bold;
+}

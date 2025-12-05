@@ -1,0 +1,448 @@
+/* ========= RESET BÁSICO ========= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* ========= KIT CONTAINER (COUNTDOWN) ========= */
+
+.kit-container {
+  width: 100%;
+  border-radius: 10px;
+  padding: 14px;
+  display: none;
+  /* controlado via JS */
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* cards lado a lado em telas maiores */
+.kit-countdown {
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1 1 calc(50% - 12px);
+  /* 2 colunas por padrão */
+  max-width: calc(50% - 12px);
+  min-width: 0;
+}
+
+.kit-modelo {
+  display: none;
+}
+
+.kit-badge {
+  display: none;
+  background: #004080;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.kit-entrega {
+  font-size: clamp(0.9rem, 1.1vw, 1rem);
+  color: #000;
+}
+
+.kit-titulo {
+  font-size: clamp(1rem, 1.4vw, 1.25rem);
+  margin: 4px 0 6px;
+}
+
+.kit-timer {
+  color: #000;
+  font-size: clamp(0.9rem, 1.4vw, 1.1rem);
+  margin-top: 6px;
+}
+
+/* ========= BANNER ROOT ========= */
+
+.banner-root {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  background-image: url("https://github.com/silvadevmateus-tech/hospedagemProdutos/blob/main/tec/imagens/FUNDO_AZUL_BI.jpeg?raw=true");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 16px;
+  padding: 1.5rem;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Header e botões */
+
+.banner-header {
+  position: relative;
+  min-height: 56px;
+}
+
+.banner-buttons {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  gap: 8px;
+  z-index: 2;
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.btn-timer {
+  background: #ffd200;
+  color: #1b1b1b;
+}
+
+.btn-back {
+  background: #2e7d32;
+  color: #fff;
+}
+
+/* SWITCHER */
+
+.banner-switcher {
+  position: relative;
+  z-index: 1;
+  margin-top: 10px;
+}
+
+/* Conteúdo principal */
+
+.banner-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+/* Cards genéricos */
+
+.card {
+  background: rgba(0, 0, 0, 0.85);
+  border-radius: 12px;
+  padding: 13px;
+  box-sizing: border-box;
+}
+
+/* Hover com animação */
+.card-hover {
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-hover:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Card da tabela principal */
+
+.card-tabela {
+  flex: 2;
+  min-width: 270px;
+  overflow-x: auto;
+}
+
+/* Logo */
+
+.logo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4px 0 10px 0;
+  position: relative;
+}
+
+.logo-glow {
+  position: absolute;
+  width: clamp(180px, 40%, 320px);
+  height: 80%;
+  max-height: 120px;
+  background: radial-gradient(circle,
+      rgba(255, 255, 255, 0.75) 50%,
+      rgba(255, 255, 255, 0.08) 200%,
+      transparent 100%);
+  filter: blur(10px);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.logo-img {
+  position: relative;
+  z-index: 1;
+  width: clamp(160px, 40%, 280px);
+  height: auto;
+  display: block;
+}
+
+/* Títulos */
+
+.banner-title {
+  text-align: center;
+  font-size: clamp(1.2rem, 1.3rem, 1.5rem);
+  font-weight: bold;
+  margin: 0;
+  color: #ffd200;
+}
+
+.banner-subtitle {
+  text-align: center;
+  font-size: clamp(1rem, 1.1rem, 1.2rem);
+  font-weight: bold;
+  color: #ffd200;
+  margin: 5px 0 5px 0;
+}
+
+/* Tabela */
+
+.banner-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #fff;
+  font-size: clamp(0.8rem, 2.2vw, 1rem);
+}
+
+.banner-table th,
+.banner-table td {
+  padding: 7px;
+  font-size: clamp(0.8rem, 2.2vw, 1.1rem);
+}
+
+.banner-table thead tr {
+  border-bottom: 1px solid #1f1f1f;
+}
+
+.banner-table tbody tr {
+  border-bottom: 1px solid #1f1f1f;
+}
+
+.banner-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.th-info {
+  text-align: left;
+  padding: 10px;
+  font-size: clamp(1rem, 2.4vw, 1.4rem);
+  color: #ffd200;
+}
+
+.th-date {
+  text-align: right;
+  padding: 10px;
+  font-size: clamp(0.9rem, 2.2vw, 1.3rem);
+  color: #ffd200;
+}
+
+.td-right {
+  text-align: right;
+}
+
+/* Card da legenda */
+
+.card-legenda {
+  flex: 1;
+}
+
+.legenda-titulo {
+  font-size: 1rem;
+  color: #ffd200;
+  margin-top: 0;
+}
+
+.legenda-item {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.legenda-bolinha {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.bolinha-azul {
+  background: #3b82f6;
+}
+
+.bolinha-verde {
+  background: #22c55e;
+}
+
+.bolinha-amarela {
+  background: #fde047;
+}
+
+.legenda-texto {
+  font-size: clamp(0.9rem, 1.1vw, 1.1rem);
+}
+
+.legenda-descricao {
+  color: #ccc;
+}
+
+/* ========= RESPONSIVIDADE GERAL ========= */
+
+/* Tablets e notebooks pequenos */
+@media (max-width: 1024px) {
+  .banner-root {
+    padding: 1rem;
+    border-radius: 12px;
+  }
+  .kit-container {
+    max-height: 800px;
+    overflow-y: auto;
+  }
+
+  .kit-container::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .kit-container::-webkit-scrollbar-track {
+    background: #e0e0e0;
+    border-radius: 4px;
+  }
+
+  .kit-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+  }
+
+  .kit-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  .banner-content {
+    gap: 16px;
+  }
+}
+
+/* Celulares / telas até 768px */
+@media (max-width: 768px) {
+  body {
+    padding: 0 8px;
+  }
+
+  .banner-root {
+    padding: 0.9rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  }
+
+  .banner-content {
+    flex-direction: column;
+  }
+
+  .card-tabela,
+  .card-legenda {
+    width: 100%;
+  }
+
+  .banner-header {
+    min-height: auto;
+    padding-top: 8px;
+  }
+
+  .banner-buttons {
+    position: static;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .banner-table th,
+  .banner-table td {
+    padding: 6px;
+  }
+}
+
+/* Celulares muito pequenos (até 480px) */
+@media (max-width: 480px) {
+  .banner-root {
+    padding: 0.75rem;
+    border-radius: 10px;
+  }
+  .banner-table th,
+  .banner-table td {
+    font-size: 4vw;
+  }
+  .card {
+    padding: 10px;
+  }
+
+  .kit-container {
+    max-height: 800px;
+    overflow-y: auto;
+  }
+
+  .kit-container::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .kit-container::-webkit-scrollbar-track {
+    background: #e0e0e0;
+    border-radius: 4px;
+  }
+
+  .kit-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+  }
+
+  .kit-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  .kit-entrega {
+    font-size: 0.85rem;
+  }
+
+  .kit-titulo {
+    font-size: 1rem;
+  }
+
+  .kit-timer {
+    font-size: 0.85rem;
+  }
+
+  .kit-badge {
+    padding: 8px 10px;
+    font-size: 0.75rem;
+  }
+}

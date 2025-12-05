@@ -1,0 +1,104 @@
+/* CONTAINER PRINCIPAL */
+.aviso-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    border-radius: 18px;
+    overflow: hidden;
+    background-color: #ffc800;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+}
+
+/* TOPO AMARELO */
+.aviso-topo {
+    background-color: #ffc800;
+    padding: 12px 5% 18px 5%;
+    text-align: center;
+}
+
+.logo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4px 0 10px 0;
+    position: relative;
+}
+
+/* Brilho atrás do logo */
+.logo-glow {
+    position: absolute;
+    width: clamp(180px, 40%, 320px);
+    height: 80%;
+    max-height: 120px;
+    background: radial-gradient(circle,
+        rgba(255,255,255,0.75) 50%,
+        rgba(255,255,255,0.08) 200%,
+        transparent 100%);
+    filter: blur(10px);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+/* Logo */
+.logo-img {
+    position: relative;
+    z-index: 1;
+    width: clamp(180px, 40%, 300px);
+    height: auto;
+    display: block;
+}
+
+/* CORPO AZUL */
+.aviso-body {
+    position: relative;
+    background-image: url("https://github.com/silvadevmateus-tech/hospedagemProdutos/blob/main/tec/imagens/FUNDO_AZUL_BI.jpeg?raw=true");
+    padding: 36px 8%;
+    border-radius: 0 0 18px 18px;
+}
+
+/* ESFERA DE FUNDO */
+.circle-bg {
+    position: absolute;
+    right: -20%;
+    bottom: -25%;
+    width: 65%;
+    height: 80%;
+    border-radius: 50%;
+    background: rgba(0,33,90,0.3);
+}
+
+/* CONTEÚDO INTERNO */
+.aviso-content {
+    position: relative;
+    z-index: 1;
+    text-align: left;
+}
+
+/* TÍTULO PRINCIPAL */
+.aviso-title {
+    text-align: center;
+    color: #ffc800;
+    font-weight: 900;
+    font-size: clamp(1.8rem,3vw,2.5rem);
+    margin-bottom: 24px;
+}
+
+/* TEXTO */
+.aviso-text {
+    font-size: clamp(1.1rem,2vw,1.4rem);
+    line-height: 1.6;
+}
+
+.aviso-text p {
+    margin-bottom: 16px;
+}
+
+/* TEXTO FINAL DESTACADO */
+.aviso-final {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 24px;
+    color: #ffc800;
+}
