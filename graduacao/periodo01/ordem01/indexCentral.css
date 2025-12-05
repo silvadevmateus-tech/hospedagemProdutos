@@ -25,7 +25,7 @@ body {
   align-items: stretch;
   justify-content: flex-start;
   flex-wrap: wrap;
-  height: 680px;
+  height: 600px;
   overflow-y: auto;
 }
 
