@@ -26,7 +26,6 @@ body {
 /* ========= BANNER ROOT ========= */
 .banner-root {
   width: 100%;
-  max-width: 1200px;
   background-image: url("https://github.com/silvadevmateus-tech/hospedagemProdutos/blob/main/tec/imagens/FUNDO_AZUL_BI.jpeg?raw=true");
   border-radius: 24px;
   padding: 20px 24px 26px;
