@@ -25,6 +25,8 @@ body {
   align-items: stretch;
   justify-content: flex-start;
   flex-wrap: wrap;
+  height: 680px;
+  overflow-y: auto;
 }
 
 /* cards lado a lado em telas maiores */
